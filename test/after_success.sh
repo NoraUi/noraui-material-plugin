@@ -5,7 +5,6 @@ echo "TRAVIS_BRANCH is $TRAVIS_BRANCH"
 echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
     
 if [ "$TRAVIS_REPO_SLUG" == 'NoraUi/noraui-material-plugin' ] && [ "$TRAVIS_BRANCH" == 'master' ] && [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
-    cd project
     mvn_version=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.version}' --non-recursive org.codehaus.mojo:exec-maven-plugin:1.5.0:exec)
     echo "Maven version is $mvn_version"
     if [[ $mvn_version == *"-SNAPSHOT" ]]; then
