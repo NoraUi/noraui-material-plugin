@@ -1,4 +1,6 @@
+cd $(dirname $0)
 cd ..
+pwd
 
 echo "TRAVIS_REPO_SLUG is $TRAVIS_REPO_SLUG"
 echo "TRAVIS_BRANCH is $TRAVIS_BRANCH"
