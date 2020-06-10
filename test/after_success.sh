@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd $(dirname $0)
+cd ..
+pwd
+
 curl -Lo travis_after_all.py https://raw.github.com/dmakhno/travis_after_all/master/travis_after_all.py
 python travis_after_all.py https://api.travis-ci.org
 export $(cat .to_export_back)
